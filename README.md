@@ -1,1 +1,2 @@
-# Cadastro_Flask1
+# flask_cadastro
+Cadastro simples em Flask

@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h3 class="page-header">Editar de Usuario</h3>
+<hr>
+<br>
+<div class="container">
+  <form method="POST" action="#">
+
+  <div class="row">
+      <div class="form-group col-md-2">
+        <label>Nome</label>
+       </div>
+    <div class="form-group col-md-10">
+        <input type="text" class="form-control" name="Nome" id="Nome" placeholder="Nome Completo">
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="form-group col-md-2">
+        <label>Endereço</label>
+       </div>
+    <div class="form-group col-md-10">
+        <input type="text" class="form-control" name="Endereco" id="Endereco" placeholder="Rua e Numero">
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="form-group col-md-2">
+        <label >Email</label>
+       </div>
+    <div class="form-group col-md-10">
+        <input type="email" class="form-control" name="Email" id="Email" placeholder="Email">
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-2">
+      <label >Telefone</label>
+    </div>
+    <div class="form-group col-md-3">
+          <input type="text" class="form-control" name="Telefone" id="Telefone" placeholder="Telefone">
+    </div>
+    <div class="form-group col-md-3">
+          <input type="text" class="form-control" name="Comercial" id="Comercial" placeholder="Telefone Comercial">
+    </div>
+    <div class="form-group col-md-3">
+          <input type="text" class="form-control" name="Celular" id="Celular" placeholder="Celular">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12" style="text-align: right">
+      <a href="index" class="btn btn-default">Cancelar</a>
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+  </div>
+
+  </form>
+</div>
+
+{% endblock %}

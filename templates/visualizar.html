@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <h3 class="text-muted">Lista de usuários cadastrados</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Endereço</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Comercial</th>
+        <th>Celular</th>
+        <th width="15%">Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for dict_item in parent_dict %}
+          <tr>
+              {% for key, value in dict_item.items() %}
+                <td> {{value}}</td>
+              {% endfor %}
+              <td class="actions">
+                <a class="btn btn-warning btn-sm" href="{{url_for('editar',id='parent_dict.index[]')}}">Editar</a>
+                <a class="btn btn-danger btn-sm"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+              </td>
+          </tr>
+        {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+<div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modalLabel">Excluir Item</h4>
+      </div>
+      <div class="modal-body">
+        Deseja realmente excluir este item?
+      </div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-primary">Sim</button>
+       <button type="button" class="btn btn-danger" data-dismiss="modal">Não</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
