@@ -1,2 +1,2 @@
 # flask_cadastro
-Cadastro simples em Flask
+Cadastro de usuario simples em Flask sem banco de dados
