@@ -11,15 +11,15 @@
         <th>Telefone</th>
         <th>Comercial</th>
         <th>Celular</th>
-      
+
       </tr>
     </thead>
     <tbody>
 
-        {% for dict_item in parent_dict %}
+         {% for dict_item in parent_dict %}  <!--retira da lista todos os dicionarios que estão armazenados -->
           <tr>
-              {% for key, value in dict_item.items() %}
-                <td> {{value}}</td>
+              {% for key, value in dict_item.items() %} <!-- Retira as keys e os values dos dicionarios -->
+                <td> {{value}}</td> <!-- exibe apenas os values que foram retirados dos dicionarios -->
               {% endfor %}
 
           </tr>

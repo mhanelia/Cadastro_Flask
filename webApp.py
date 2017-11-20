@@ -14,17 +14,13 @@ def cadastro(): # metodo que realiza o "cadastro" do usuario
     if request.method == 'POST':  # se o metodo vier por POST ele pega todos os dados que vier do formulario e salva na classe Pessoa
         dados_dict = request.form.to_dict() #salva todos os dados do formulario da pagina /cadastro dentro da variavel "dados_dict"
         p.set_pessoa(dados_dict) # passa por parametro a variavel dados_dict para a função set_pessoa da classe pessoa
-        return render_template('visualizar.html', parent_dict = p.get_pessoa()) # exibe a pagina visualizar passando uma Lista de dicionarios
+        return render_template('visualizar.html', parent_dict = p.get_pessoa()) # exibe a pagina visualizar passando uma Lista de dicionarios salva na classe Pessoa
 
     return render_template('cadastro.html')
 
 @app.route('/visualizar')
 def visualizar():
     return render_template('visualizar.html', parent_dict = p.get_pessoa() )
-
-@app.route('/editar')
-def editar():
-    return render_template('editar.html')
 
 @app.route('/index')
 def index():
