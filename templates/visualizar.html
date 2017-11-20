@@ -11,7 +11,7 @@
         <th>Telefone</th>
         <th>Comercial</th>
         <th>Celular</th>
-        <th width="15%">Ação</th>
+      
       </tr>
     </thead>
     <tbody>
@@ -21,10 +21,7 @@
               {% for key, value in dict_item.items() %}
                 <td> {{value}}</td>
               {% endfor %}
-              <td class="actions">
-                <a class="btn btn-warning btn-sm" href="{{url_for('editar',id='parent_dict.index[]')}}">Editar</a>
-                <a class="btn btn-danger btn-sm"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
-              </td>
+
           </tr>
         {% endfor %}
 

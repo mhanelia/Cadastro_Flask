@@ -9,5 +9,5 @@ class Pessoa(object):
         self.lista_dados.append(dic)
 
 
-    def get_pessoas(self):
+    def get_pessoa(self):
         return self.lista_dados
